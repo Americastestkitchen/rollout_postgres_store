@@ -1,6 +1,6 @@
 # RolloutPostgresStore
-
-TODO: Write a gem description
+[![Build Status](https://travis-ci.org/Americastestkitchen/rollout_postgres_store.svg)](https://travis-ci.org/Americastestkitchen/rollout_postgres_store)
+[![Code Climate](https://codeclimate.com/github/Americastestkitchen/rollout_postgres_store/badges/gpa.svg)](https://codeclimate.com/github/Americastestkitchen/rollout_postgres_store)
 
 ## Installation
 
@@ -18,9 +18,27 @@ Or install it yourself as:
 
     $ gem install rollout_postgres_store
 
+## Dependencies
+
+This gem relies on Postgres' Hstore extension and the Rollout gem. You will need  
+Gems:
+- active_record >= 4.0.0
+- rollout >= 2.0.0
+- pg 
+
+Postgres >= 9.2
+
 ## Usage
 
-TODO: Write usage instructions here
+To use this gem, you will need to have an ActiveRecord model with a hstore 
+attribute. Once you have that, you should add the following inside of
+`config/initializers/rollout.rb`:
+
+```
+# FeatureFlag is the model that has your Hstore attribute.
+# 'data' is the hstore attribute on your FeatureFlag model.
+ROLLOUT = Rollout.new(RolloutPostgresStore.new(FeatureFlag, 'data'))
+```
 
 ## Contributing
 
