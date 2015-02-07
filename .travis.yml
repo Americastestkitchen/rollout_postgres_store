@@ -1,0 +1,18 @@
+language: ruby
+cache: bundler
+
+rvm:
+  - 2.0.0
+  - 2.1.0
+  - 2.1.2
+  - 1.9.3
+
+before_install:
+  - createdb rollout_store_test
+  - gem install bundler
+
+script: "bundle exec rake"
+
+branches:
+  only:
+    - master
