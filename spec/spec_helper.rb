@@ -1,5 +1,7 @@
 require 'active_record'
 require 'database_cleaner'
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 begin
   ActiveRecord::Base.establish_connection({
