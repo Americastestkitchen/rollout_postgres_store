@@ -1,6 +1,7 @@
 # RolloutPostgresStore
 [![Build Status](https://travis-ci.org/Americastestkitchen/rollout_postgres_store.svg)](https://travis-ci.org/Americastestkitchen/rollout_postgres_store)
 [![Code Climate](https://codeclimate.com/github/Americastestkitchen/rollout_postgres_store/badges/gpa.svg)](https://codeclimate.com/github/Americastestkitchen/rollout_postgres_store)
+[![Test Coverage](https://codeclimate.com/github/Americastestkitchen/rollout_postgres_store/badges/coverage.svg)](https://codeclimate.com/github/Americastestkitchen/rollout_postgres_store)
 
 ## Installation
 
